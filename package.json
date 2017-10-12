@@ -1,0 +1,27 @@
+{
+  "name": "docker-example",
+  "version": "1.0.0",
+  "description": "Learn how to dockerize your code",
+  "main": "index.js",
+  "scripts": {
+    "server-prod": "pm2 start -i 0 --name docker-example index.js --no-daemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dijam/docker-example.git"
+  },
+  "keywords": [
+    "docker",
+    "nodejs"
+  ],
+  "author": "Majid Garmaroudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dijam/docker-example/issues"
+  },
+  "homepage": "https://github.com/dijam/docker-example#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
