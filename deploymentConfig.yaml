@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        deploymentconfig: my-perfect-node-example-app
+        traffic: "true"
     spec:
       containers:
         - image: docker-registry.default.svc:5000/kabanero/my-perfect-node-example-app:latest
