@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: my-perfect-node-example
+spec:
+  port:
+    targetPort: 3000
+  to:
+    kind: Service
+    name: my-perfect-node-example-service
