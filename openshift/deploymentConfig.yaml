@@ -12,7 +12,7 @@ spec:
         traffic: "true"
     spec:
       containers:
-        - image: docker-registry.default.svc:5000/kabanero/my-perfect-node-example-app:latest
+        - image: docker-registry.default.svc:5000/web-backend/my-perfect-node-example-app:latest
           imagePullPolicy: Always
           name: my-perfect-node-example-app-2020
           ports:
