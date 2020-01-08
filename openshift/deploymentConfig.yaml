@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: DeploymentConfig
 metadata:
-  generateName: my-perfect-node-example-app-
+  name: my-perfect-node-example-deploymentconfig-2020
 spec:
   replicas: 1
   strategy:
@@ -14,35 +14,10 @@ spec:
       containers:
         - image: docker-registry.default.svc:5000/kabanero/my-perfect-node-example-app:latest
           imagePullPolicy: Always
-          name: my-perfect-node-example-app
+          name: my-perfect-node-example-app-2020
           ports:
             - containerPort: 3000
               protocol: "TCP"
           # command: ["/bin/sh", "-c", "while true ; do date; sleep 1; done;"]
   # triggers:
   # - type: ConfigChange
-
-
-apiVersion: v1
-kind: Route
-metadata:
-  name: my-perfect-node-example
-spec:
-  port:
-    targetPort: 3000
-  to:
-    kind: Service
-    name: my-perfect-node-example-service
-  
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-perfect-node-example-service
-spec:
-  selector:
-    traffic: "true"
-  ports:
-    - port: 3000
-      protocol: TCP
-      targetPort: 3000
